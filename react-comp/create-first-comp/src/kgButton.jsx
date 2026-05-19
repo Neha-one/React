@@ -1,6 +1,17 @@
-export function KgButton(){
-  return(
-    <button>click here for info</button>
-  )
+export function KgButton() {
+
+  function clickHandler() {
+
+    alert("neha kumari baranwal");
+
+  }
+
+  return (
+
+    <button onClick={clickHandler}>
+      click here for info
+      
+    </button>
+
+  );
 }
-// export default KgButton;
