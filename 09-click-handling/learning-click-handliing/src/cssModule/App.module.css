@@ -1,0 +1,15 @@
+.Container {
+  width: 50%;
+  /* align-content: center; */
+  border: 2px solid blueviolet;
+  margin: 11px;
+  padding: 11px;
+  background-color: rgb(245, 234, 218);
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  background-color: rgb(223, 200, 169);
+  border-radius: 3px;
+}
