@@ -7,7 +7,7 @@ import AppName from './components/AppName';
 import CourseInput from './components/CourseInput';
 
 function App() {
-  let textToShow = 'enter coursename!';
+  let textToShow = 'enter coursename by user!';
 
   const handleOnChange = (event) => {
     console.log(event.target.value);
