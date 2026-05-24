@@ -5,11 +5,23 @@ import styles from "./cssModule/App.module.css"
 import ContainerList from "./components/ContainerItem";
 import AppName from './components/AppName';
 import CourseInput from './components/CourseInput';
+import { useState } from 'react';
 
 function App() {
+  //Method - 01 to use State:-
+  // let textState = useState("course entered by user!");
+  // let textToShow = textState[0];
+  // let setTextState = textState[1];
+
+  //Method - 02 to use State:- using array.
+  let [textToShow, setTextState] = useState("course entered by user!");
+
+  console.log(`Current value is: ${textToShow}`);
+
 
   const handleOnChange = (event) => {
     console.log(event.target.value);
+    setTextState(event.target.value);
   };
   const ItemList = ['B.Tech', 'B.Com', 'MBA', 'BCA', 'BPharma', 'PHD'];
 
@@ -17,6 +29,7 @@ function App() {
     <div className={styles.Container}>
       <AppName></AppName>
       <CourseInput handleOnChange={handleOnChange}></CourseInput>
+      <p>{textToShow}</p>
       <ContainerList ItemList={ItemList}></ContainerList>
     </div>
   )
