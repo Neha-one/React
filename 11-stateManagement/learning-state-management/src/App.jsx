@@ -6,6 +6,7 @@ import ContainerList from "./components/ContainerItem";
 import AppName from './components/AppName';
 import CourseInput from './components/CourseInput';
 import { useState } from 'react';
+import ErrorMessage from './components/ErrorMessage';
 
 function App() {
   //Method - 01 to use State:-
@@ -15,21 +16,28 @@ function App() {
 
   //Method - 02 to use State:- using array.
   let [textToShow, setTextState] = useState("course entered by user!");
+  let [ItemList, setItemList] = useState([]);
 
-  console.log(`Current value is: ${textToShow}`);
+  // console.log(`Current value is: ${textToShow}`);
 
 
-  const handleOnChange = (event) => {
-    console.log(event.target.value);
-    setTextState(event.target.value);
+  const onKeyDown = (event) => {
+    if (event.key === "Enter") {
+      let newCourse = event.target.value;
+      // event.target.value = "";
+      let newList = [...ItemList, newCourse];
+      setItemList(newList);
+    }
   };
-  const ItemList = ['B.Tech', 'B.Com', 'MBA', 'BCA', 'BPharma', 'PHD'];
+
+  // const ItemList = ['B.Tech', 'B.Com', 'MBA', 'BCA', 'BPharma', 'PHD'];
+
 
   return (
     <div className={styles.Container}>
       <AppName></AppName>
-      <CourseInput handleOnChange={handleOnChange}></CourseInput>
-      <p>{textToShow}</p>
+      <CourseInput handleKeyDown={onKeyDown}></CourseInput>
+      <ErrorMessage ItemList={ItemList}></ErrorMessage>
       <ContainerList ItemList={ItemList}></ContainerList>
     </div>
   )

@@ -9,6 +9,7 @@ const Item = ({ courseName, handlePurchaseBtn }) => {
     console.log(`Purchased ${courseName}`);
 
   }
+
   return (
     <li className={`${styles.listItem} list-group-item`}>{courseName}
       <button className={`${styles.clickButton} btn btn-info`} type="button"
