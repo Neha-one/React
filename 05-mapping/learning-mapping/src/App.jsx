@@ -16,6 +16,7 @@ function App() {
           <li>{item}</li>
         ))}
       </ul>
+    
     </>
   );
 }

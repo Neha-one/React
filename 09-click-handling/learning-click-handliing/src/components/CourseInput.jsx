@@ -1,5 +1,7 @@
 import styles from '../cssModule/CourseInput.module.css';
+
 const CourseInput = () => {
+  
   const handleOnChange = (event) => {
     console.log(event.target.value)
   };
@@ -9,4 +11,4 @@ const CourseInput = () => {
     />
   )
 }
-export default CourseInput;
+export default CourseInput; 

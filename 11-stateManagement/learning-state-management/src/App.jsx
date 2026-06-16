@@ -7,6 +7,7 @@ import AppName from './components/AppName';
 import CourseInput from './components/CourseInput';
 import { useState } from 'react';
 import ErrorMessage from './components/ErrorMessage';
+import Neha from './Neha';
 
 function App() {
   //Method - 01 to use State:-
@@ -34,7 +35,9 @@ function App() {
 
 
   return (
+    
     <div className={styles.Container}>
+      <Neha></Neha>
       <AppName></AppName>
       <CourseInput handleKeyDown={onKeyDown}></CourseInput>
       <ErrorMessage ItemList={ItemList}></ErrorMessage>
