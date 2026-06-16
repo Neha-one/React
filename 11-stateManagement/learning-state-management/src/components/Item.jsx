@@ -20,3 +20,4 @@ const Item = ({ courseName, handlePurchaseBtn }) => {
   )
 }
 export default Item;   
+ 
