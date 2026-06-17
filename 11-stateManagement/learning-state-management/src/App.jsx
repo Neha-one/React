@@ -7,7 +7,6 @@ import AppName from './components/AppName';
 import CourseInput from './components/CourseInput';
 import { useState } from 'react';
 import ErrorMessage from './components/ErrorMessage';
-import Neha from './Neha';
 
 function App() {
   //Method - 01 to use State:-
@@ -16,30 +15,32 @@ function App() {
   // let setTextState = textState[1];
 
   //Method - 02 to use State:- using array.
-  let [textToShow, setTextState] = useState("course entered by user!");
-  let [ItemList, setItemList] = useState([]);
-
-  // console.log(`Current value is: ${textToShow}`);
+  let [ItemList, setItemList] = useState(['B.Tech', 'B.Com']);
 
 
   const onKeyDown = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       let newCourse = event.target.value;
-      // event.target.value = "";
+      event.target.value = "";
       let newList = [...ItemList, newCourse];
+      console.log('entered value is ' + newCourse);
       setItemList(newList);
     }
   };
-
-  // const ItemList = ['B.Tech', 'B.Com', 'MBA', 'BCA', 'BPharma', 'PHD'];
-
+  // const handleOnclick = (event) => {
+  //   let newCourse = event.target.value;
+  //   console.log(event);
+  //   event.target.value = "";
+  //   let newList = [...ItemList, newCourse];
+  //   console.log('entered value is ' + newCourse);
+  //   setItemList(newList);
+  // };
 
   return (
-    
+
     <div className={styles.Container}>
-      <Neha></Neha>
       <AppName></AppName>
-      <CourseInput handleKeyDown={onKeyDown}></CourseInput>
+      <CourseInput handleKeyDown={onKeyDown} ></CourseInput>
       <ErrorMessage ItemList={ItemList}></ErrorMessage>
       <ContainerList ItemList={ItemList}></ContainerList>
     </div>
