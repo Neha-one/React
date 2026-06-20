@@ -15,39 +15,22 @@ function Inputbox({ handleOnclick }) {
   let clr = async (event) => {
     handleOnclick(nameChange, ageChange);
     event.preventDefault();
-    await fetch("http://localhost:3000/submitn", 
+    await fetch("http://localhost:3000/submitn",
       {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        name: nameChange,
-        age: ageChange
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: nameChange,
+          age: ageChange
+        })
       })
-    })
 
     setnameChange("");
     setageChange("");
   }
 
-  // let clr = async (event) => {
-  //   handleOnclick(nameChange, ageChange);
-  //   event.preventDefault();
-  //   await fetch("http://localhost:3000/submitn", {
-  //     method: 'POST',
-  //     Headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify({
-  //       name: nameChange,
-  //       age: ageChange
-  //     })
-  //   })
-
-  //   setnameChange("")
-  //   setnameChange("")
-  // }
   return (
 
     <form onSubmit={clr}>
