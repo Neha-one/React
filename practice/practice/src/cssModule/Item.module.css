@@ -1,0 +1,9 @@
+.itemDiv {
+  display: flex;
+  gap: 21px;
+  justify-content: flex-start;
+}
+
+.itemDiv button {
+  float: left;
+}
