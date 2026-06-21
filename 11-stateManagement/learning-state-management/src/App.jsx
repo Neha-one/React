@@ -17,16 +17,34 @@ function App() {
   //Method - 02 to use State:- using array.
   let [ItemList, setItemList] = useState(['B.Tech', 'B.Com']);
 
+  //--------------when curr value does not depend on the previous val : 
+
+  // const onKeyDown = (event) => {
+  //   if (event.key === 'Enter') {
+  //     let newCourse = event.target.value;
+  //     event.target.value = "";
+  //     let newList = [...ItemList, newCourse];
+  //     console.log('entered value is ' + newCourse);
+  //     setItemList(newList);
+  //   }
+  // };
+
+  //-----Update State from Previous State ------------------,
+  //--------------when curr value depends on the previous val : 
 
   const onKeyDown = (event) => {
-    if (event.key === 'Enter') {
-      let newCourse = event.target.value;
-      event.target.value = "";
-      let newList = [...ItemList, newCourse];
-      console.log('entered value is ' + newCourse);
-      setItemList(newList);
+    setItemList((currVal) => {
+      if (event.key === 'Enter') {
+        let newCourse = event.target.value;
+        event.target.value = "";
+        let newList = [...currVal, newCourse];
+        console.log('entered value is ' + newCourse);
+      }
     }
-  };
+    )
+  }
+
+
   // const handleOnclick = (event) => {
   //   let newCourse = event.target.value;
   //   console.log(event);
