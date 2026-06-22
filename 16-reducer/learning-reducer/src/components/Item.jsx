@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import styles from "../cssModule/Item.module.css"
-import AppContext from "../store/AppContext";
+import { AppContext } from "../store/app-item-store";
 
 function Item({ itemName, itemDate }) {
 

@@ -2,47 +2,21 @@ import styles from "./cssModule/App.module.css";
 import AppName from "./components/AppName";
 import InputBoxes from "./components/InputBoxes";
 import DataContainer from "./components/DataContainer";
-import { useState } from "react";
-import AppContext from "./store/AppContext";
+import AppContextProvider from "./store/app-item-store";
 import Empty from "./components/Empty";
+
+
+
 function App() {
-
-
-  let dataList = [
-    {
-      name: "aryan",
-      date: 15,
-    }
-  ];
-
-  let [appVal, setappVal] = useState(dataList);
-
-  let addNewItem = (NameVal, DateVal) => {
-    let newList = [...appVal, {
-      name: NameVal,
-      date: DateVal,
-    }];
-    setappVal(newList);
-
-  };
-  let deleteItem = (itemName) => {
-    // Array ke sab items rakho, bas us item ko hata do jiska name itemName ke equal hai.
-    const newTodoItems = appVal.filter((item) => item.name !== itemName);
-    setappVal(newTodoItems);
-  }
-
-
   return (
-    <AppContext.Provider value={{appVal,addNewItem,deleteItem}}>
+    <AppContextProvider>
       <div className={styles.container}>
         <AppName />
-        <InputBoxes/>
+        <InputBoxes />
         <Empty />
         <DataContainer />
       </div>
-    </AppContext.Provider>
-
-  )
+    </AppContextProvider>)
 }
 
 export default App;

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import AppContext from "../store/AppContext";
+import {AppContext} from "../store/app-item-store";
 import Item from "./Item";
 import styles from "../cssModule/DataContainer.module.css"
 import { useState } from "react";
@@ -7,7 +7,7 @@ function DataContainer({ handleDelClick }) {
 
   // user and AppContext link here through this line.
   const dataListContextObj = useContext(AppContext);
-const Contextdata = dataListContextObj.appVal;
+  const Contextdata  = dataListContextObj.appVal;
 
   return (
 
@@ -16,7 +16,6 @@ const Contextdata = dataListContextObj.appVal;
         <Item key={index} itemName={item.name} itemDate={item.date} ></Item>
       ))}
     </ul>
-
   )
 }
 export default DataContainer;
