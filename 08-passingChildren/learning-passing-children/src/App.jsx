@@ -14,6 +14,7 @@ function App() {
           <li className="list-group-item">vegetables</li>
         </ul>
       </Container>
+
       <Container><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat eligendi animi placeat.</p></Container>
     </>
   );
