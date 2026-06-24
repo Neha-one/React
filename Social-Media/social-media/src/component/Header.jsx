@@ -1,8 +1,8 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "../cssModule/Header.module.css";
 
 function Header() {
   return (
-    <header className="p-3 text-bg-dark">
+    <header className={`${styles.header} p-3 text-bg-dark` }>
       <div className="container">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a

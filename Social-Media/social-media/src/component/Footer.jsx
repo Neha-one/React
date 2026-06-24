@@ -1,6 +1,7 @@
+import styles from "../cssModule/Footer.module.css"
 function Footer() {
   return (
-    <div className="container">
+    <div className={`${styles.footer} container` }>
       {" "}
       <footer className="py-3 my-4">
         {" "}
