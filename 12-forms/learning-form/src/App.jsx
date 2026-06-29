@@ -1,5 +1,5 @@
 import styles from "./cssModule/App.module.css";
-import Inputbox from "./component/Inputbox";
+import Inputbox1 from "./component/Inputbox1";
 import ItemsContainer from "./component/ItemsContainer";
 import { use, useState } from "react";
 function App() {
@@ -13,7 +13,7 @@ function App() {
   }]
 
   let [val, setval] = useState(dataList);
-  
+
   let handleOnclick = (Name, Age) => {
     let newval = [...val, {
       name: Name,
@@ -23,7 +23,7 @@ function App() {
   }
   return (
     <div className={styles.container}>
-      <Inputbox handleOnclick={handleOnclick} />
+      <Inputbox1 handleOnclick={handleOnclick} />
       <ItemsContainer dataList={val} />
     </div>
   )

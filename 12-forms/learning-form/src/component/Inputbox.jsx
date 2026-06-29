@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Inputbox({ handleOnclick }) {
-
+  //-----   we can do this using only one useState show in 2nd Inputbox.jsx you have to see .
   let [nameChange, setnameChange] = useState("")
   let [ageChange, setageChange] = useState("")
 
@@ -12,6 +12,7 @@ function Inputbox({ handleOnclick }) {
   let handleAgeChange = (event) => {
     setageChange(event.target.value);
   }
+
   let clr = async (event) => {
     handleOnclick(nameChange, ageChange);
     event.preventDefault();
