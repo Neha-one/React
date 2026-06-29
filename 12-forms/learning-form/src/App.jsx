@@ -3,6 +3,7 @@ import Inputbox from "./component/Inputbox";
 import ItemsContainer from "./component/ItemsContainer";
 import { use, useState } from "react";
 function App() {
+
   let dataList = [{
     name: "neha",
     age: 21
@@ -12,6 +13,7 @@ function App() {
   }]
 
   let [val, setval] = useState(dataList);
+  
   let handleOnclick = (Name, Age) => {
     let newval = [...val, {
       name: Name,

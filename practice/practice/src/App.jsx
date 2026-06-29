@@ -1,47 +1,34 @@
-import styles from "./cssModule/App.module.css";
-import AppName from "./components/AppName";
-import InputBoxes from "./components/InputBoxes";
-import DataContainer from "./components/DataContainer";
 import { useState } from "react";
+import Input from "./input";
+import './a.css'
 function App() {
 
-
-  let dataList = [
-    // {
-    //   name: "book",
-    //   date: 33
-
-    // },
+  let [val, setVal] = useState(
     {
-      name: "coffee",
-      date: 35
-    }];
-
-  let [appVal, setappVal] = useState(dataList);
-
-  let handleOnclick = (NameVal, DateVal) => {
-    // console.log(`${NameVal} ${DateVal}`);
-
-    let newList = [...appVal, {
-      name: NameVal,
-      date: DateVal,
-    }];
-    setappVal(newList);
-
-  };
-  let handleDelClick = (itemName) => {
-    // Array ke sab items rakho, bas us item ko hata do jiska name itemName ke equal hai.
-    const newTodoItems = appVal.filter((item) => item.name !== itemName);
-    setappVal(newTodoItems);
+      name: "",
+      email: ""
+    }
+  );
+  const handleemailChange = (event) => {
+    setVal({ ...val, email: event.target.value, })
+  }
+  const handlnameChange = (event) => {
+    let newName = { ...val, name: event.target.value };
+    setVal(newName);
+  }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(val.name);
+    console.log(val.email);
   }
 
   return (
-    <div className={styles.container}>
-      <AppName />
-      <InputBoxes handleOnclick={handleOnclick} />
-      <DataContainer dataList={appVal} handleDelClick={handleDelClick} />
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input type="text" placeholder="enter name" value={val.name} onChange={handlnameChange} />
+      <input type="email" placeholder="enter email" value={val.email} onChange={handleemailChange} />
+      <button type="submit">submit</button>
+
+    </form>
   )
 }
-
 export default App;
