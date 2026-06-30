@@ -8,4 +8,4 @@ const AppContext = createContext(
     addNewItem: () => { },
     deleteItem: () => { }
   });
-export default AppContext;
+export default AppContext; 

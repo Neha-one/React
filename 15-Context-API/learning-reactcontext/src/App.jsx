@@ -1,9 +1,9 @@
+import { useState } from "react";
+import AppContext from "./store/AppContext";
 import styles from "./cssModule/App.module.css";
 import AppName from "./components/AppName";
 import InputBoxes from "./components/InputBoxes";
 import DataContainer from "./components/DataContainer";
-import { useState } from "react";
-import AppContext from "./store/AppContext";
 import Empty from "./components/Empty";
 function App() {
 
@@ -33,10 +33,10 @@ function App() {
 
 
   return (
-    <AppContext.Provider value={{appVal,addNewItem,deleteItem}}>
+    <AppContext.Provider value={{ appVal, addNewItem, deleteItem }}>
       <div className={styles.container}>
         <AppName />
-        <InputBoxes/>
+        <InputBoxes />
         <Empty />
         <DataContainer />
       </div>

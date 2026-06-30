@@ -4,7 +4,9 @@ import AppContext from "../store/AppContext";
 function Empty() {
 
   const dataListContextObj = useContext(AppContext);
+
   const Contextdata = dataListContextObj.appVal;
+  
   let datalength = Contextdata.length
 
   return (
