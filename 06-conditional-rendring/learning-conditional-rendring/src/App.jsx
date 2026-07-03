@@ -2,7 +2,7 @@
 //   // "rice", "dal", "milk", "curd", "eggs", "nuts"
 //   let FoodItems = [];
 
-  // ------------METHOD 01: If else statement-----------------
+// ------------METHOD 01: If else statement-----------------
 //   if (FoodItems.length === 0) {
 //     return <h3>i am still hungry</h3>;
 //   }

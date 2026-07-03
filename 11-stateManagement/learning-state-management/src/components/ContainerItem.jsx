@@ -10,8 +10,8 @@ const ContainerList = ({ ItemList }) => {
   let onBuyButton = (item, event) => {
     let newItems = [...activeItem, item];
     setActiveItem(newItems);
-  } 
-  
+  }
+
   return (
     <ul className="list-group">
       {ItemList.map((item) => (

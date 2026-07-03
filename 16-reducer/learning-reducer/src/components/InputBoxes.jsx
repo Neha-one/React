@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import styles from "../cssModule/InputBoxes.module.css";
-import {AppContext} from "../store/app-item-store";
+import { AppContext } from "../store/app-item-store";
 
 function InputBoxes() {
 

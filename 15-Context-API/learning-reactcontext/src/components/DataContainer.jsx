@@ -7,7 +7,7 @@ function DataContainer({ handleDelClick }) {
 
   // user and AppContext link here through this line.
   const dataListContextObj = useContext(AppContext);
-const Contextdata = dataListContextObj.appVal;
+  const Contextdata = dataListContextObj.appVal;
 
   return (
 

@@ -2,7 +2,7 @@
 import Item from './Item';
 
 
-const ContainerList = ({ ItemList  }) => {
+const ContainerList = ({ ItemList }) => {
   return (
     <ul className="list-group">
       {ItemList.map((item) => (

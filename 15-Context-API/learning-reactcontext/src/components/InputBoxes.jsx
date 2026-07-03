@@ -6,7 +6,7 @@ function InputBoxes() {
 
   const dataListContextObj = useContext(AppContext);
   const Contextdata = dataListContextObj.addNewItem;
-  
+
   let [NameVal, setNameVal] = useState("");
   let [DateVal, setDateVal] = useState("");
 

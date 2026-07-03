@@ -1,6 +1,6 @@
 import styles from '../cssModule/CourseInput.module.css';
 
-const CourseInput = ({ handleKeyDown}) => {
+const CourseInput = ({ handleKeyDown }) => {
 
   return (
     <div className={styles.ipdiv}>

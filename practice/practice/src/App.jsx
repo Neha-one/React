@@ -1,6 +1,14 @@
 import { useState } from "react";
 import Input from "./input";
 import './a.css'
+
+function reducer(state, action) {
+  if (action === "increment") {
+    return state + 1;
+  }
+  return state;
+}
+
 function App() {
 
   let [val, setval] = useState({

@@ -1,7 +1,7 @@
 import styles from "../cssModule/Item.module.css";
 
 const Item = ({ courseName }) => {
-  
+
   const ClickHandle = (event) => {
     console.log(event);
     console.log(`Purchased ${courseName}`);

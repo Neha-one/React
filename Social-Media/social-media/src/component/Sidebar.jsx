@@ -1,20 +1,9 @@
-import { useState } from "react";
 import styles from "../cssModule/Sidebar.module.css";
-import { IoMdClose, IoMdMenu } from "react-icons/io";
-function Sidebar({ selectedTab }) {
-
-  let [sidebar, setsidebar] = useState();
-
-
-  var openmenu = () => {
-  }
-  var closemenu = () => {
-
-  }
+function Sidebar({ selectedTab, setselectedTab }) {
   return (
     <div
-      className={`${styles.sidebar} d-flex flex-column flex-shrink-0 p-3 text-bg-dark`}
-      style={{ width: "200px" }}
+      className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
+      style={{ width: "180px " }}
     >
       {" "}
       <a
@@ -22,12 +11,7 @@ function Sidebar({ selectedTab }) {
         className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
       >
         {" "}
-        <svg
-          className="bi pe-none me-2"
-          width="40"
-          height="32"
-          aria-hidden="true"
-        >
+        <svg className="bi pe-none me-2" width="40" height="32" aria-hidden="true">
           <use xlinkHref="#bootstrap"></use>
         </svg>{" "}
         <span className="fs-4">Sidebar</span>{" "}
@@ -35,9 +19,9 @@ function Sidebar({ selectedTab }) {
       <hr />{" "}
       <ul className="nav nav-pills flex-column mb-auto">
         {" "}
-        <li className="nav-item" onClick={selectedTab}>
+        <li className="nav-item" onClick={() => setselectedTab("Home")}>
           {" "}
-          <a href="#" className="nav-link text-white" aria-current="page">
+          <a href="#" className={`nav-link text-white ${selectedTab === "Home" && "active"}`} aria-current="page">
             {" "}
             <svg
               className="bi pe-none me-2"
@@ -50,9 +34,9 @@ function Sidebar({ selectedTab }) {
             Home
           </a>{" "}
         </li>{" "}
-        <li>
+        <li onClick={() => setselectedTab("Create Post")}>
           {" "}
-          <a href="#" className="nav-link text-white">
+          <a href="#" className={`nav-link text-white ${selectedTab === "Create Post" && "active"}`}>
             {" "}
             <svg
               className="bi pe-none me-2"
@@ -64,11 +48,9 @@ function Sidebar({ selectedTab }) {
             </svg>
             Create Post
           </a>{" "}
-        </li>
-        <IoMdClose className={styles.closemenu} onClick={closemenu()} />
-      </ul>
-      <IoMdMenu className={styles.openmenu} onClick={openmenu()} />
-      <hr />
+        </li>{" "}
+      </ul>{" "}
+      <hr />{" "}
       <div className="dropdown">
         {" "}
         <a
@@ -104,14 +86,16 @@ function Sidebar({ selectedTab }) {
               Profile
             </a>
           </li>{" "}
-          <li className="dropdown-divider"></li>{" "}
+          <li>
+            <hr className="dropdown-divider" />
+          </li>{" "}
           <li>
             <a className="dropdown-item" href="#">
               Sign out
             </a>
           </li>{" "}
         </ul>{" "}
-      </div>
+      </div>{" "}
     </div>
   );
 }
