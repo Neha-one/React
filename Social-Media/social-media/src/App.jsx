@@ -23,6 +23,6 @@ function App() {
         </div>
       </div>
     </PostListProvider>
-  );
+  ); 
 }
 export default App;

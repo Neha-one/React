@@ -23,6 +23,8 @@ function CreatePost() {
     const dislikes = DislikesElement.current.value;
     const likes = LikesElement.current.value;
     const views = ViewsElement.current.value;
+
+
     UserIdElement.current.value = "";
     TitleELement.current.value = "";
     bodyElement.current.value = "";
@@ -31,8 +33,25 @@ function CreatePost() {
     DislikesElement.current.value = "";
     ViewsElement.current.value = "";
 
-
-    addPost(userId, title, body, tags, likes, dislikes, views);
+    fetch('https://dummyjson.com/posts/add', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        title,
+        body,
+        reactions: {
+          likes,
+          dislikes,
+        },
+        views,
+        userId,
+        tags,
+      })
+    })
+      .then(res => res.json())
+      .then((post) => {
+        addPost(post)
+      });
   }
 
   return (
