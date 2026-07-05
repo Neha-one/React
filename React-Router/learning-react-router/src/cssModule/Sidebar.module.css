@@ -1,0 +1,25 @@
+.sidebar {
+  min-height: 100px;
+  position: relative;
+}
+
+.closemenu {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.openmenu {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 1.7rem;
+  cursor: pointer;
+  display: none;
+}
