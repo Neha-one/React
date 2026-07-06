@@ -21,7 +21,6 @@ const postListReducer = (currPostList, action) => {
   return updatedPostList;
 }
 
-
 const PostListProvider = ({ children }) => {
 
   const [postList, dispatchPostList] = useReducer(postListReducer, []);
@@ -51,8 +50,6 @@ const PostListProvider = ({ children }) => {
       }
     );
   }, [dispatchPostList]);
-
-
 
   return (
     <PostList.Provider value={{ postList, addPost, deletePost }}>{children}</PostList.Provider>

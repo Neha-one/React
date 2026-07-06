@@ -29,7 +29,7 @@ function App() {
     // Array ke sab items rakho, bas us item ko hata do jiska name itemName ke equal hai.
     const newTodoItems = appVal.filter((item) => item.name !== itemName);
     setappVal(newTodoItems);
-  }
+  } 
 
 
   return (
