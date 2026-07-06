@@ -1,0 +1,9 @@
+.btnBox button {
+  margin: 5px;
+}
+.privacyToggle {
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}

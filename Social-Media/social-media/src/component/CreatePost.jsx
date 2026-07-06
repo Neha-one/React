@@ -5,7 +5,6 @@ function CreatePost() {
 
   const { addPost } = useContext(PostList);
 
-
   const UserIdElement = useRef();
   const TitleELement = useRef();
   const bodyElement = useRef();
