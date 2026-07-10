@@ -1,0 +1,26 @@
+.navul {
+  display: flex;
+  gap: 16px;
+  font-size: 24px;
+  font-style: italic;
+  list-style: none;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navul a {
+  text-decoration: none;
+  color: black;
+  
+}
+
+.navul li a:hover {
+  color: chocolate;
+  
+}
+.navul li:hover{
+  transform: scale(1.1);
+}
+.wimg{
+  width: 433px;
+}
