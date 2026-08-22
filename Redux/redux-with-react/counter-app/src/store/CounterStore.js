@@ -22,7 +22,7 @@ const counterReducer = (store = INIT_VALUE, action) => {
     newStore = { ...store, counter: 0 }
   }
   else if (action.type === 'PRIVACY_TOGGLE') {
-    return {...store, privacy: !store.privacy}
+    return { ...store, privacy: !store.privacy }
   }
   return newStore;
 }

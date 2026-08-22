@@ -15,7 +15,7 @@ function App() {
       }
       <h2>first user role</h2>
       <p> {userdata?.[0]?.role} </p>
-    </>
+    </> 
   )
 }
 export default App;

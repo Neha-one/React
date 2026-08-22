@@ -36,7 +36,6 @@ function App() {
   return (
     <>
       <Focus FocusinputRef={FocusinputRef} handleClick={handleClick} />
-
       <Input ShowInputRef={ShowInputRef} handleShowOnClick={handleShowOnClick} />
       <Clrbtn clrbtn={handleclrbtn} />
       <Style setStyle={setStyle} />

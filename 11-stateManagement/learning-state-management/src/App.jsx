@@ -44,7 +44,6 @@ function App() {
     )
   }
 
-
   // const handleOnclick = (event) => {
   //   let newCourse = event.target.value;
   //   console.log(event);

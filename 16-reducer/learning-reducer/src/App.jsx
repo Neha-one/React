@@ -8,8 +8,6 @@ import Empty from "./components/Empty";
 function App() {
 
 
-
-
   return (
     <ItemContextReducer>
       <div className={styles.container}>
